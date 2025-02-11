@@ -9,7 +9,6 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@DiscriminatorValue("PROF")  // Discriminator value for the Prof entity
 public class Prof extends User {
 
     // Child-specific fields (no need for @Id here)

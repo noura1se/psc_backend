@@ -8,7 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@DiscriminatorValue("AGENT")  // Discriminator value for Agent
 public class Agent extends User {
 
     private Long agentID;
