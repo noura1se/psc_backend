@@ -2,10 +2,13 @@ package com.example.psc.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.LocalDate;
-
+@Getter
+@Setter
 @Entity
 public class Session {
     @Id
@@ -47,77 +50,5 @@ public class Session {
         this.room = room;
     }
 
-    //getters and setters:
 
-    public long getSessionID() {
-        return sessionID;
-    }
-
-    public void setSessionID(long sessionID) {
-        this.sessionID = sessionID;
-    }
-
-    public String getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(String period) {
-        this.period = period;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public LocalDate getDateS() {
-        return dateS;
-    }
-
-    public void setDateS(LocalDate dateS) {
-        this.dateS = dateS;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getClasse() {
-        return classe;
-    }
-
-    public void setClasse(String classe) {
-        this.classe = classe;
-    }
-
-    public Prof getProf() {
-        return prof;
-    }
-
-    public void setProf(Prof prof) {
-        this.prof = prof;
-    }
-
-    public Schedule getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
 }
