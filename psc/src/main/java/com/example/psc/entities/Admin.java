@@ -1,26 +1,20 @@
 package com.example.psc.entities;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.DiscriminatorValue;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-public class Admin extends User{
+@DiscriminatorValue("ADMIN")  // Discriminator value for Admin
+public class Admin extends User {
 
+    private long adminID;
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long adminID;
-
-        //constuctor
+    // Constructor
     public Admin(long adminID) {
         this.adminID = adminID;
     }
-
-
 }

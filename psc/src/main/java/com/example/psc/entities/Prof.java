@@ -1,6 +1,5 @@
 package com.example.psc.entities;
 
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,12 +9,13 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Prof extends User{
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+@DiscriminatorValue("PROF")  // Discriminator value for the Prof entity
+public class Prof extends User {
+
+    // Child-specific fields (no need for @Id here)
     private long profID;
 
-    //relations:
+    // Relations
     @OneToMany(mappedBy = "prof", cascade = CascadeType.ALL)
     private List<Session> sessions;
 
@@ -25,9 +25,7 @@ public class Prof extends User{
     @OneToMany(mappedBy = "prof", cascade = CascadeType.ALL)
     private List<Schedule> schedules;
 
-
-    //constructor
-
+    // Constructors
     public Prof(long profID) {
         this.profID = profID;
     }

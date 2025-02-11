@@ -1,26 +1,23 @@
 package com.example.psc.entities;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
 
-
 @Getter
 @Setter
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)  // Specify the inheritance strategy
+@DiscriminatorColumn(name = "role", discriminatorType = DiscriminatorType.STRING)  // Discriminator column
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userID;
 
-    //parameters:
+    // parameters:
     private String firstName;
     private String lastName;
     private LocalDate dob;
@@ -28,7 +25,7 @@ public class User {
     private String password;
     private String role;
 
-    //constructor:
+    // constructors:
     public User() {
     }
 
@@ -41,5 +38,4 @@ public class User {
         this.password = password;
         this.role = role;
     }
-
 }
