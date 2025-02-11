@@ -14,6 +14,8 @@ public class Agent extends User {
 
     private String typeAgt;
 
+
+
     //constructor:
 
     public Agent(Long agentID, String typeAgt) {
@@ -38,4 +40,5 @@ public class Agent extends User {
     public void setTypeAgt(String typeAgt) {
         this.typeAgt = typeAgt;
     }
+
 }
