@@ -10,7 +10,6 @@ import java.time.LocalDate;
 @Setter
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)  // Specify the inheritance strategy
-@DiscriminatorColumn(name = "role", discriminatorType = DiscriminatorType.STRING)  // Discriminator column
 public class User {
 
     @Id
