@@ -2,9 +2,13 @@ package com.example.psc.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 @Entity
 public class Prof extends User{
     @Id
@@ -25,16 +29,6 @@ public class Prof extends User{
     //constructor
 
     public Prof(long profID) {
-        this.profID = profID;
-    }
-
-    //geters & seter
-
-    public long getProfID() {
-        return profID;
-    }
-
-    public void setProfID(long profID) {
         this.profID = profID;
     }
 }

@@ -2,10 +2,13 @@ package com.example.psc.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.List;
 
+@Getter
+@Setter
 @Entity
 public class Historique {
     @Id
@@ -35,64 +38,6 @@ public class Historique {
         this.dateRes = dateRes;
         this.classe = classe;
         this.room = room;
-        this.prof = prof;
-    }
-
-    //getters and setters:
-
-    public long getResID() {
-        return resID;
-    }
-
-    public void setResID(long resID) {
-        this.resID = resID;
-    }
-
-    public String getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(String period) {
-        this.period = period;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public LocalDate getDateRes() {
-        return dateRes;
-    }
-
-    public void setDateRes(LocalDate dateRes) {
-        this.dateRes = dateRes;
-    }
-
-    public String getClasse() {
-        return classe;
-    }
-
-    public void setClasse(String classe) {
-        this.classe = classe;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
-    public Prof getProf() {
-        return prof;
-    }
-
-    public void setProf(Prof prof) {
         this.prof = prof;
     }
 }

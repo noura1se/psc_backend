@@ -22,7 +22,6 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Session> session;
 
-
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Event> event;
 
