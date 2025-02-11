@@ -20,7 +20,6 @@ public class Admin extends User{
 
     //geters & seters
 
-
     public long getAdminID() {
         return adminID;
     }
