@@ -2,10 +2,14 @@ package com.example.psc.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Getter
+@Setter
 @Entity
 public class Report {
     @Id
@@ -34,53 +38,4 @@ public class Report {
         this.user = user;
     }
 
-    //getters and setters:
-
-    public long getReportID() {
-        return reportID;
-    }
-
-    public void setReportID(long reportID) {
-        this.reportID = reportID;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public LocalDate getDateR() {
-        return dateR;
-    }
-
-    public void setDateR(LocalDate dateR) {
-        this.dateR = dateR;
-    }
-
-    public LocalTime getTimeR() {
-        return timeR;
-    }
-
-    public void setTimeR(LocalTime timeR) {
-        this.timeR = timeR;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

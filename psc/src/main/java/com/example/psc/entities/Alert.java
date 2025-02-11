@@ -4,7 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Alert {
 
@@ -22,25 +26,6 @@ public class Alert {
     }
 
     public Alert() {
-    }
-
-    //setters & getters
-
-
-    public long getAlertID() {
-        return alertID;
-    }
-
-    public void setAlertID(long alertID) {
-        this.alertID = alertID;
-    }
-
-    public String getPhonenum() {
-        return phonenum;
-    }
-
-    public void setPhonenum(String phonenum) {
-        this.phonenum = phonenum;
     }
 
 }
