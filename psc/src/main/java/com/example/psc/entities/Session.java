@@ -16,11 +16,12 @@ public class Session {
     private long sessionID;
 
     //parameters:
-    private String period;        //(S1,S2,S3,S4,S5
-    private String type;          //(reserved or primary)
-    private LocalDate dateS;
-    private String status;
-    private String classe;
+    private String period;        //(S1,S2,S3,S4,S5)
+    //private String type;        //(reserved or primary) -> only contain primary
+    //private LocalDate dateS;
+    private String jourS;         //jour instead of date
+    private String status;        //(en cours,done,...)
+    private String classe;        //(smi3,smp5,...)
 
     //relations:
     @ManyToOne
@@ -38,17 +39,14 @@ public class Session {
     //constructor:
 
 
-    public Session(long sessionID, String period, String type, LocalDate dateS, String status, String classe, Prof prof, Schedule schedule, Room room) {
+    public Session(long sessionID, String period, String jourS, String status, String classe, Prof prof, Schedule schedule, Room room) {
         this.sessionID = sessionID;
         this.period = period;
-        this.type = type;
-        this.dateS = dateS;
+        this.jourS = jourS;
         this.status = status;
         this.classe = classe;
         this.prof = prof;
         this.schedule = schedule;
         this.room = room;
     }
-
-
 }

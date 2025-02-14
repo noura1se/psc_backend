@@ -20,6 +20,8 @@ public class Historique {
     private String status;
     private LocalDate dateRes;
     private String classe;
+    //ajouter jourRes
+    private String jourRes;
 
     @ManyToOne
     @JoinColumn(name = "roomID", nullable = false) // FK column in sessions table
@@ -31,12 +33,14 @@ public class Historique {
 
     //constructor:
 
-    public Historique(long resID, String period, String status, LocalDate dateRes, String classe, Room room, Prof prof) {
+
+    public Historique(long resID, String period, String status, LocalDate dateRes, String classe, String jourRes, Room room, Prof prof) {
         this.resID = resID;
         this.period = period;
         this.status = status;
         this.dateRes = dateRes;
         this.classe = classe;
+        this.jourRes = jourRes;
         this.room = room;
         this.prof = prof;
     }
