@@ -9,6 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@PrimaryKeyJoinColumn(name = "userID")
 public class Prof extends User {
 
     // Child-specific fields (no need for @Id here)

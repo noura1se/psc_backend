@@ -9,7 +9,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)  // Specify the inheritance strategy
+@Inheritance(strategy = InheritanceType.JOINED)// Specify the inheritance strategy
+@DiscriminatorColumn(name = "dtype")
 public class User {
 
     @Id
